@@ -1,0 +1,190 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.main {
+  width: 100%;
+  height: 120vh;
+  /* height: auto; */
+  background-image: url("/images/backgroundImage.jpg");
+  background-size: 1700px, 100vw;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  box-shadow: inset 350px 350px 400px rgba(0, 0, 0, 0.852);
+  position: relative;
+}
+.navigation {
+  width: 100%;
+  display: flex;
+  height: 45px;
+  padding: 20px 0;
+}
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 160px;
+}
+svg {
+  height: 90%;
+}
+.signinbtn {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 160px;
+}
+.signinbtn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cc0f18;
+  color: white;
+  outline-width: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  width: 75px;
+  height: 33px;
+  letter-spacing: normal;
+  border-radius: 4px;
+}
+.bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 52%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  flex-direction: column;
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.information p {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.information p:nth-child(1) {
+  font-size: 3.1rem;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+.information p:nth-child(2) {
+  font-size: 1.56rem;
+  font-weight: 400;
+}
+.information p:nth-child(3) {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.9px;
+}
+.input-form-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-top: 10px;
+  /* border: 1px solid yellow; */
+}
+
+.input-form-div .input-div input,
+.input-form-div .button-div button {
+  height: 50px;
+}
+.input-form-div .input-div input {
+  /* outline-width: 0; */
+  border: 1px solid white;
+  width: 350px;
+  margin-right: 10px;
+  padding-left: 10px;
+  border-radius: 4px;
+  background-color: #0f0f0f97;
+  position: relative;
+  font-size: 14px;
+  transition: all 200ms ease-in;
+}
+label {
+  position: absolute;
+  pointer-events: none;
+  color: white;
+  top: 82.5%;
+  left: 28.5%;
+  z-index: 100;
+  font-size: 18px;
+  transition: all 200ms ease-in;
+}
+.input-form-div .input-div input:focus {
+  color: white;
+  outline-width: 2px;
+  outline-color: white;
+}
+.input-form-div .input-div input:focus ~ label {
+  transform: translateY(-8px);
+
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+.input-form-div .button-div button {
+  background-color: #cc0f18;
+  width: 250px;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  outline-width: none;
+  border: none;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1280px) {
+  .signinbtn,
+  .logo-container {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 960px) {
+  svg {
+    height: 50%;
+  }
+  .signinbtn,
+  .logo-container {
+    padding: 0 30px;
+  }
+  .information p:nth-child(1) {
+    font-size: 2rem;
+  }
+  .information p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  .information p:nth-child(3) {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .input-form-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .input-form-div .input-div {
+    width: 80%;
+  }
+  .input-form-div .input-div input {
+    width: 100%;
+  }
+  .input-form-div .button-div button {
+    width: 150px;
+  }
+}
